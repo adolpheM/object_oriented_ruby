@@ -1,12 +1,12 @@
 class Car
 
-	attr_reader :name, :color, :price
-	attr_writer :price
+	attr_accessor :name, :color, :price
+	
 
-	def initialize(set_name, set_color, set_price)
-		@name = set_name
-		@color = set_color
-		@price = set_price
+	def initialize(car_hash)
+		@name = car_hash[:name]
+		@color = car_hash[:color]
+		@price = car_hash[:price]
 
 	end  
 
@@ -17,7 +17,7 @@ class Car
 
 end 
 
-car = Car.new("Bugatti", "black", 2000000)
+car = Car.new({name: "Bugatti", color: "black", price: 2000000})
 car.price=(2500000)
 
 puts car.info	
