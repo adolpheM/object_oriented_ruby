@@ -1,3 +1,12 @@
+module ReportEmail
+
+  def send_report
+    puts "Sending email..."
+    # use email sending library...
+    puts "Email sent!"
+  end
+
+
 class Employee
   attr_reader :first_name, :last_name, :active, :salary
   attr_writer :active
@@ -29,11 +38,7 @@ class Manager < Employee
     @employees = input_options[:employees]
   end
 
-  def send_report
-    puts "Sending email..."
-    # use email sending library...
-    puts "Email sent!"
-  end
+  
 
   def give_all_raises
     @employees.each do |employee|
@@ -46,6 +51,12 @@ class Manager < Employee
       employee.active = false 
     end 
   end 
+
+  def intern 
+    include ReportEmail 
+    
+  end 
+
 
 
 end

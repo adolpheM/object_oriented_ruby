@@ -1,6 +1,6 @@
 
 
-module Vehicle
+module Motion
 
   def initialize
     @speed = 0
@@ -21,7 +21,7 @@ module Vehicle
 end 
 
 class Car 
-  include Vehicle 
+  include Motion 
 
   def honk_horn
     puts "Beeeeeeep!"
@@ -29,7 +29,7 @@ class Car
 end
 
 class Bike
-  include Vehicle 
+  include Motion 
   
 
   def ring_bell
